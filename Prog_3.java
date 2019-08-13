@@ -13,7 +13,7 @@ public class Prog_3
 				a/=i;
 			}
 		}
-		if(a>2)
+		if(a>=2)
 			Max=a;
 		System.out.println("The largest prime factor is "+Max);
 	}
