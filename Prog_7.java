@@ -3,12 +3,12 @@ public class Prog_7
 {
 	public static void main(String[] args) 
 	{
-		int j,k=1,result=0;
-		for(j=2;k<10001;j++)
+		int j,count=2,result=0;
+		for(j=3;count<=10001;j+=2)
 			if(isPrime(j) && j%2!=0)
 			{
 				result=j;
-				k++;
+				count++;
 			}
 		System.out.println("The 10001st prime is "+result);
 	}

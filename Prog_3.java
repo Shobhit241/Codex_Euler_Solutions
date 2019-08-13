@@ -1,32 +1,20 @@
 /* the largest prime factor of the number 600851475143 */
-public class Prog_3
+public class Prog_3 
 {
 	public static void main(String[] args) 
 	{
-		int i=3;
-		long s=0,n=600851475143L;
-		while(i<n/2) 
+		int i;
+		long Max=0,a=600851475143L;
+		for(i=3	;i<=(int)Math.sqrt(a);i+=2)
 		{
-			
-			i+=2;
-			if(n%i==0 && isPrime(i))
+			while(a%i==0)
 			{
-				n=n/i;
-				s=n;
+				Max=i;
+				a/=i;
 			}
 		}
-		System.out.println("The largest prime factor is "+s);
-	}
-	
-	public static boolean isPrime(long n)
-	{
-		int c=0;
-		for(int i=1;i<=(int)Math.sqrt(n);i+=2)
-			if(n%i==0)
-				c++;
-		if(c>1)
-			return false;
-		else
-			return true;
+		if(a>2)
+			Max=a;
+		System.out.println("The largest prime factor is "+Max);
 	}
 }
